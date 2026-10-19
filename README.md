@@ -1,4 +1,4 @@
-# Hybrid Vector + Graph RAG — Harry Potter Books
+# The Hogwarts Archive — Hybrid Vector + Graph RAG
 
 Ask natural-language questions about the Harry Potter book series (all 7
 books, chunked by chapter) three complementary ways over a Neo4j knowledge
@@ -30,8 +30,8 @@ Dockerfile      builds the frontend, then serves it from the API (one service)
 
 1. Clone the repo:
    ```
-   git clone https://github.com/AbdullahYousaf-13/Hybrid-Vector-Graph-Rag.git
-   cd Hybrid-Vector-Graph-Rag
+   git clone https://github.com/AbdullahYousaf-13/The-Hogwarts-Archive.git
+   cd The-Hogwarts-Archive
    ```
 
 2. Create a virtual environment and install dependencies:
@@ -83,8 +83,8 @@ then serves `frontend/dist` from FastAPI, so there is a single origin and no COR
    used. Never commit `.env`.
 3. Health check path is `/api/health` (no LLM call, no quota cost).
 
-Run the same image locally with `docker build -t hogwarts-archive . && docker run
--p 8000:8000 --env-file .env hogwarts-archive`.
+Run the same image locally with `docker build -t the-hogwarts-archive . && docker run
+-p 8000:8000 --env-file .env the-hogwarts-archive`.
 
 Three things to expect on the free tier:
 
@@ -101,7 +101,7 @@ Three things to expect on the free tier:
 10 minutes so the free service doesn't sleep (and Aura Free doesn't pause). It
 does nothing until you add the site URL as a repository variable: Settings >
 Secrets and variables > Actions > Variables > `RENDER_URL`
-(e.g. `https://your-service.onrender.com`). GitHub can delay scheduled runs by a
+(e.g. `https://the-hogwarts-archive.onrender.com`). GitHub can delay scheduled runs by a
 few minutes, so an occasional cold start is still possible.
 
 ## Using your own data
